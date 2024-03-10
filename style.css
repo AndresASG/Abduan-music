@@ -84,6 +84,13 @@ input {
 }
 
 .btn {
+    padding: 20px 15px;
+    background-color: #283b64;
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    color: #f5fcff;
+    font-size: 16px;
     padding: 17px 15px;
     width: 200px;
     align-self: center;
