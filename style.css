@@ -184,14 +184,65 @@ html.modal-active, body.modal-active {
 }
 #modal-container .modal-background .modal { 
     /* CAMBIAR TAMAñO MODAL, FORMATO, X */
-    background: white;
+    background: linear-gradient(
+        50deg,
+        rgba(43,54,100,1) 0%,
+        rgba(43,73,125,1) 50%,
+        rgba(43,90,140,1) 100%
+    );
     padding: 50px;
-    /* width: 70vw; Poner cuanto quieras */
-    /* height: 70vh; Poner cuanto quieras */
+     width: 37vw; 
+     height: 80vh; 
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 25px;
     font-weight: 300;
     position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding: 20px;
+    background-color: #283b64;
+    border: 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    color: #fff;
+    font-size: 15px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+
+th {
+    padding: 20px 15px ;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#modal-container .modal-background .modal h2 {
+    color: #f5fcff;
+}
+
+#modal-container .modal-background .modal p {
+    color: #f5fcff;
+    padding: 20px;
+}
+
+#modal-container .modal-background .modal .btn {
+    padding: 20px;
+    margin-top: 8%;
+    margin-left: 10px;
+    margin-right: 14px;
 }
 
 @keyframes fadeIn {
