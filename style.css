@@ -191,8 +191,8 @@ html.modal-active, body.modal-active {
         rgba(43,90,140,1) 100%
     );
     padding: 50px;
-     width: 37vw; 
-     height: 80vh; 
+     width: 40vw; 
+     height: 90vh; 
     display: inline-block;
     border-radius: 25px;
     font-weight: 300;
@@ -201,27 +201,39 @@ html.modal-active, body.modal-active {
 }
 
 .container {
-    padding: 20px;
+    padding: 1rem;
     background-color: #283b64;
     border: 0;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 table {
     color: #fff;
-    font-size: 15px;
+    font-size: 1rem;
     table-layout: fixed;
     border-collapse: collapse;
+    overflow: auto;
+    width: 100%;
+    text-align: start;
 }
 
+thead {
+    background-color: #283b64;
+    position: sticky;
+    top: -20px;
+}
 
 th {
-    padding: 20px 15px ;
+    padding: 10px;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: start;
+    position: sticky;
 }
 
 td {
@@ -240,9 +252,7 @@ td {
 
 #modal-container .modal-background .modal .btn {
     padding: 20px;
-    margin-top: 8%;
-    margin-left: 10px;
-    margin-right: 14px;
+
 }
 
 .modal {
@@ -334,4 +344,8 @@ td {
   svg path,
   svg rect{
     fill: #FF6700;
+  }
+
+  .generado {
+    display: none;
   }

@@ -56,7 +56,7 @@
 
             </div>
 
-            <button type="button" class="btn button" id="two">Generar Playlist</button>
+            <button type="button" class="btn button submit" id="two">Generar Playlist</button>
             
         </form>
       
@@ -65,10 +65,10 @@
     <div id="modal-container">
         <div class="modal-background">
           <div class="modal">
-            <h2>Playlist generada!</h2>
-            <p>Muchas gracias por ingresar los datos, aqui tienes tu playlist personalizada</p>
-            <div class="container">
-                <table>
+            <h2 class="generado">Playlist generada!</h2>
+            <p class="generado">Muchas gracias por ingresar los datos, aqui tienes tu playlist personalizada</p>
+            <div class="container generado" style="height: 53vh;">
+                <table id="table">
                     <thead>
                         <tr>
                             <th>N°</th>
@@ -77,101 +77,42 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>happy</td>
-                            <td>Pharrell Williams</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>who can it be now?</td>
-                            <td>Men at work</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>shake it off</td>
-                            <td>Taylor shiwft</td>
-                           
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>bohemian rhapsody</td>
-                            <td>Queen</td>
 
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>hold the line</td>
-                            <td>toto</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>take it to the run</td>
-                            <td>Speedwagon</td>
-                            
-                        </tr>
-
-                        <tr>
-                            <td>7</td>
-                            <td>maneater</td>
-                            <td>outes</td>
-                            
-                        </tr>
-
-                        <tr>
-                            <td>8</td>
-                            <td>africa</td>
-                            <td>toto</td>
-                            
-                        </tr>
-
-                        <tr>
-                            <td>9</td>
-                            <td>the fianl coutdown</td>
-                            <td>Europe</td>
-                            
-                        </tr>
-
-                        <tr>
-                            <td>10</td>
-                            <td>eye of the tiger</td>
-                            <td>survivor</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
             
-            <button type="button" class="btn button" id="two">Refrescar</button>
-            <button type="button" class="btn button" id="two">Actualizar Playlist</button>
+            <div class="container" style="background-color: inherit; justify-content: space-between;">
+                <button type="button" class="btn button generado submit" id="two">Refrescar</button>
+                <button type="button" class="btn button generado" id="btn-actualizar">Actualizar Playlist</button>
+            </div>
+              <!-- LOADER -->
+                        <div class="loader loader--style8" style="display: none;">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                               width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                              <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                              </rect>
+                              <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                              </rect>
+                              <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                              </rect>
+                            </svg>
+                          </div>
+                          <!-- LOADER -->
             </div>
         </div>
-      </div>
+    </div>
 
-            <!-- LOADER -->
-            <div class="loader loader--style8" style="display: none;">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                  <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                </svg>
-              </div>
-              <!-- LOADER -->
+          
             </div>
         </div>
       </div>

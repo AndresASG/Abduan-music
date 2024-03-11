@@ -4,12 +4,12 @@ $('.button').click(function(){
   $('body').addClass('modal-active');
 })
   
-$('#modal-container').click(function(){
+$('#btn-actualizar').click(function(){
   $(this).addClass('out');
   $('body').removeClass('modal-active');
 });
 
-$("#two").click(function() {
+$(".submit").click(function() {
   var formData = {
       nombre: $('#nombre').val(),
       genero: $('#genero').val(),
@@ -26,12 +26,26 @@ $("#two").click(function() {
       data: formData,
       beforeSend: function() {
           $(".loader").show();
+          $('.generado').hide();
       },
       success: function(response) {
-          console.log(response);
+        response = response.replace('```json\n', '').replace('\n```', '').replace('```JSON\n', '');
+        console.log(response);
+          // Select the table body
+          let data = JSON.parse(response);
+          let tbody = document.querySelector('#table tbody');
+          tbody.innerHTML = '';
+          
+          // Add each song as a table row
+          data.forEach(song => {
+              let row = `<tr><td>${song.numero}</td><td>${song.nombre}</td><td>${song.artista}</td></tr>`;
+              tbody.innerHTML += row;
+          });
       },
       complete: function() {
           $(".loader").hide();
+          $('.generado').show();
+          
       },
       error: function(error) {
           console.log(error);
