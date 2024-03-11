@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abduan</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     
     <div class="form-container">
-        <h2>Abduan</h2>
+        <h2>Musical AI</h2>
         <p>
             Creamos musica para ti
         </p>
@@ -20,66 +19,60 @@
             <div class="form-group">
 
                 <div class="form-content">
-                    <label for="name">Nombre</label>
-                    <input type="text" placeholder="Nombre">
-                </div>
-
-                
-                <div class="form-content">
-                    <label for="name">Apellido</label>
-                    <input type="text" placeholder="Apellido">
+                    <label for="nombre">Nombre</label>
+                    <input name="nombre" type="text" placeholder="Nombre">
                 </div>
 
                 <div class="form-content">
-                    <label for="name">Edad</label>
-                    <input type="text">
+                    <label for="genero">Genero</label>
+                    <input name="genero" type="text" placeholder="Reggaeton, Rock, Pop">
                 </div>
 
                 <div class="form-content">
-                    <label for="name">Genero</label>
-                    <input type="text" placeholder="(Masculino, Femenino)">
+                    <label for="animo">Estado de animo</label>
+                    <input name="animo" type="text" placeholder="Feliz, Triste">
                 </div>
 
                 <div class="form-content">
-                    <label for="name">Estado de animo</label>
-                    <input type="text">
+                    <label for="decada">Decada</label>
+                    <input name="decada" type="text" placeholder="90s, 2000, 2010">
                 </div>
 
                 <div class="form-content">
-                    <label for="name">Gustos musicales</label>
-                    <input type="text">
+                    <label for="idioma">Idioma</label>
+                    <input name="idioma" type="text" placeholder="Español, Ingles">
                 </div>
 
                 <div class="form-content">
-                    <label for="name">Actividad</label>
-                    <input type="text">
-                </div>
-
-                <div class="form-content">
-                    <label for="name">Intensidad</label>
-                    <input type="text" placeholder="(suaves o energeticas)">
-                </div>
-
-                <div class="form-content">
-                    <label for="name">Idioma</label>
-                    <input type="text">
-                </div>
-
-                <div class="form-content">
-                    <label for="name">Duracion</label>
-                    <input type="text">
+                    <label for="duracion">Duracion</label>
+                    <input name="duracion" type="text" placeholder="2 - 5 min">
                     
+                </div>
+
+                <div class="form-content" style="grid-column-end: span 2;">
+                    <label for="adicional">Detalles adicionales (opcional)</label>
+                    <textarea name="adicional" id="adicional" cols="30" rows="10" placeholder="Escribe detalles adicionales"></textarea>
                 </div>
 
             </div>
 
-            <button class="btn">Generar Playlist</button>
+            <button type="button" class="btn button" id="two">Generar Playlist</button>
             
         </form>
       
     </div>
-
-
     
+    <div id="modal-container">
+        <div class="modal-background">
+          <div class="modal">
+            <h2>I'm a Modal</h2>
+            <p>PONER CONTENIDO ACA</p>
+            </div>
+        </div>
+      </div>
+
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
