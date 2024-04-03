@@ -32,23 +32,29 @@ $(".submit").click(function() {
         response = response.replace('```json\n', '').replace('\n```', '').replace('```JSON\n', '');
         console.log(response);
           // Select the table body
-          let data = JSON.parse(response);
-          let tbody = document.querySelector('#table tbody');
-          tbody.innerHTML = '';
-          
-          // Add each song as a table row
-          data.forEach(song => {
-              let row = `<tr><td>${song.numero}</td><td>${song.nombre}</td><td>${song.artista}</td></tr>`;
-              tbody.innerHTML += row;
-          });
-      },
-      complete: function() {
+          try {
+            let data = JSON.parse(response);
+            let tbody = document.querySelector('#table tbody');
+            tbody.innerHTML = '';
+            
+            // Add each song as a table row
+            data.forEach(song => {
+                let row = `<tr><td>${song.numero}</td><td>${song.nombre}</td><td>${song.artista}</td></tr>`;
+                tbody.innerHTML += row;
+            });
+          } catch (error) {
+            throw error;
+          }
+        },
+        complete: function() {
           $(".loader").hide();
           $('.generado').show();
           
-      },
-      error: function(error) {
+        },
+        error: function(error) {
+          $(".error").show();
           console.log(error);
       }
   });
 });
+

@@ -4,6 +4,45 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg: #1a1e2d;
+    --green: #a5ea9b;
+    --pink: #ff61d8;
+    --blue: #569cfa;
+    --orange: #ffcc81;
+    --cyan: #7ed1e2;
+}
+#bongo-cat {
+    fill: var(--bg);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 4;
+}
+#bongo-cat .laptop-cover, #bongo-cat .headphone .band {
+    fill: none;
+}
+#bongo-cat .paw, #bongo-cat .head {
+    stroke: var(--orange);
+}
+#bongo-cat .laptop-keyboard {
+    stroke-width: 2;
+}
+#bongo-cat .terminal-code {
+    stroke-width: 5;
+}
+#bongo-cat .music .note, #bongo-cat .laptop-base, #bongo-cat .laptop-cover, #bongo-cat .paw .pads {
+    stroke: var(--pink);
+}
+#bongo-cat .table line, #bongo-cat .headphone .band, #bongo-cat .headphone .speaker path:nth-child(3) {
+    stroke: var(--green);
+}
+#bongo-cat .terminal-frame, #bongo-cat .laptop-keyboard, #bongo-cat .headphone .speaker path:nth-child(2) {
+    stroke: var(--blue);
+}
+#bongo-cat .terminal-code, #bongo-cat .headphone .speaker path:first-child {
+    stroke: var(--cyan);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(
@@ -13,6 +52,7 @@ body {
         rgba(35,40,72,1) 100%
     );
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -20,6 +60,7 @@ body {
 
 .form-container {
     text-align: center;
+    padding: 50px;
 }
 
 .form-container h2 {
@@ -241,6 +282,10 @@ td {
     text-transform: capitalize;
 }
 
+td+td {
+    width: auto;
+}
+
 #modal-container .modal-background .modal h2 {
     color: #f5fcff;
 }
@@ -341,7 +386,6 @@ td {
   /*
     Set the color of the icon
   */
-  svg path,
   svg rect{
     fill: #FF6700;
   }

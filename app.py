@@ -6,7 +6,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-GEMINI_API_KEY = "" #REGISTRARSE Y OBTENER UNA API KEY EN https://console.cloud.google.com/
+GEMINI_API_KEY = "AIzaSyCLaJmOOzJ7IiQwHwXgHXFZXFanBeaAY4M"
 genai.configure(api_key = GEMINI_API_KEY)
 
 model = genai.GenerativeModel('gemini-pro')
